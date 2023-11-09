@@ -41,4 +41,6 @@ this project was create with a contribution of different sources including but n
 
 7. The usage of "alphabetical_testing.xlsx" is originated by edX Boot Camps LLC and is intended for educational purposes only.
 
-
+# Contact Information
+https://github.com/Dav9nchi
+David.castanoe@yahoo.com.
