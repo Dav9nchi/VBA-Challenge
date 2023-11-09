@@ -18,6 +18,25 @@ Create a script that loops through all the stocks for one year and outputs the f
 conditional formatting that will highlight positive change in green and negative change in red is included.
 
 # How to use it.
-1. click following link : https://github.com/Dav9nchi/VBA-challenge/new/main
-2. 
+1. click following link : https://github.com/Dav9nchi/VBA-Challenge/tree/main
+2. Get informed by the project on README.md
+3. follow the code link https://github.com/Dav9nchi/VBA-Challenge/blob/main/(Code)%20Stocks%20Yearly%20Summarize
+4. open and download"alphabetical_testing.xlsx"
+     Note: when download you mut have Excel aplication and "Developer" adjustment on your excel.
+5. After download the file, open excel, upload the file, click on Developer (excel), find "macro" on your upper left hand side under "Home", Assign the name to your macro and then run the code assign on the step number 3. (it will take a couple minutes)
+
+# Credits
+this project was create with a contribution of different sources including but not limited as 
+1. ChatGPT (https://chat.openai.com)
+   
+2. Run Code issues (https://software-solutions-online.com/next-without-for-compile-error-in-excel-vba-what-does-it-mean-and-how-do-you-fix-it/)
+   
+3. Formula Adjustment (https://www.thebalancemoney.com/what-is-percentage-change-5204725#:~:text=Step%201%3A%20Determine%20the%20original,Step%204%3A%20Multiply%20by%20100.)
+
+4.Multisheet Running Macro (https://stackoverflow.com/questions/32055165/run-macro-on-multiple-excel-worksheets)
+
+5.Slack Channel (https://app.slack.com/huddle/T05RY45JWJE/C05RY4MUMRQ)
+
+6.AskBCS Learning Assistants (Name: Tristen Username: tortiz, Name: Sunshine Username:kpavelka, Name: Garret Username: gfrank)
+
 
