@@ -23,7 +23,7 @@ conditional formatting that will highlight positive change in green and negative
 3. follow the code link https://github.com/Dav9nchi/VBA-Challenge/blob/main/(Code)%20Stocks%20Yearly%20Summarize
 4. open and download "alphabetical_testing.xlsx" https://github.com/Dav9nchi/VBA-Challenge/blob/main/alphabetical_testing.xlsx
      Note: when download you must have Excel aplication and "Developer" as a tool on your excel.
-5. After download the file, open excel, upload the file, click on Developer (excel), find "macro" on your upper left hand side under "Home", Assign the name to your macro and then run the code assign on the step number 3. (it will take a couple minutes)
+5. After download the file, open excel, upload the file, make sure to add Developer tool to your excel, click on Developer (excel), find & click "macro" on your upper left hand side under "Home", Assign the name "StocksYearlySummarize" to your macro and then run the code assign on the step number 3. (it will take a couple minutes)
 
 # Credits
 this project was create with a contribution of different sources including but not limited as 
