@@ -21,7 +21,7 @@ conditional formatting that will highlight positive change in green and negative
 1. click following link : https://github.com/Dav9nchi/VBA-Challenge/tree/main
 2. Get informed by the project on [README.md](https://github.com/Dav9nchi/VBA-Challenge/blob/main/README.md)
 3. follow the code link https://github.com/Dav9nchi/VBA-Challenge/blob/main/(Code)%20Stocks%20Yearly%20Summarize
-4. open and download"alphabetical_testing.xlsx"
+4. open and download "alphabetical_testing.xlsx" https://github.com/Dav9nchi/VBA-Challenge/blob/main/alphabetical_testing.xlsx
      Note: when download you must have Excel aplication and "Developer" as a tool on your excel.
 5. After download the file, open excel, upload the file, click on Developer (excel), find "macro" on your upper left hand side under "Home", Assign the name to your macro and then run the code assign on the step number 3. (it will take a couple minutes)
 
