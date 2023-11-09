@@ -38,38 +38,32 @@ Sub StocksYearlySummarize()
         ws.Cells(4, 16).Value = G_Ticker_Vol
         ws.Cells(3, 16).Value = G_decrease_ticker
         ws.Cells(2, 16).Value = G_increase_ticker
+        ws.Cells(4, 17).Value = G_Vol
+        ws.Cells(3, 17).Value = G_porc_decrease
+        ws.Cells(2, 17).Value = G_porc_increase
 
-        OpenRow = ws.Cells(2, 3).Value
         Tot_Stock_Vol = 0
         j = 2
 
         LastRow = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row
 
         For i = 2 To LastRow
-            Ticker = ws.Cells(j, 1).Value
-
-            If Ticker <> ws.Cells(i + 1, 1).Value Then
-                CloseRow = ws.Cells(i - 1, 6).Value
+            Ticker = ws.Cells(i, 1).Value
+            If Ticker <> ws.Cells(i + 1, 1).Value Or i = LastRow Then
+                OpenRow = ws.Cells(i, 3).Value
+                CloseRow = ws.Cells(i, 6).Value
                 Yearly_change = CloseRow - OpenRow
 
                 ws.Cells(j, 9).Value = Ticker
                 ws.Cells(j, 10).Value = Yearly_change
                 ws.Cells(j, 12).Value = Tot_Stock_Vol
-                
-             Else: OpenRow = ws.Cells(i, 3).Value
-                Tot_Stock_Vol = 0
-                j = j + 1
-            End If
-                Tot_Stock_Vol = Tot_Stock_Vol + ws.Cells(i, 7).Value
 
-                ' Yearly Change Colors '
                 If Yearly_change >= 0 Then
                     ws.Cells(j, 10).Interior.Color = vbGreen
                 Else
                     ws.Cells(j, 10).Interior.Color = vbRed
                 End If
 
-                ' Percentage Calculation '
                 If OpenRow <> 0 Then
                     Percentage_change = (Yearly_change / OpenRow)
                     ws.Cells(j, 11).Value = Format(Percentage_change, "Percent")
@@ -77,25 +71,32 @@ Sub StocksYearlySummarize()
                     ws.Cells(j, 11).Value = Format(0, "Percent")
                 End If
 
-                ' Check Greatest Increase-Decrease & Volume'
                 If Percentage_change > G_porc_increase Then
-                        G_porc_increase = Percentage_change
-                        G_increase_ticker = Ticker
+                    G_porc_increase = Percentage_change
+                    G_increase_ticker = Ticker
                 ElseIf Percentage_change < G_porc_decrease Then
-                        G_porc_decrease = Percentage_change
-                        G_decrease_ticker = Ticker
+                    G_porc_decrease = Percentage_change
+                    G_decrease_ticker = Ticker
                 End If
 
                 If Tot_Stock_Vol > G_Vol Then
                     G_Vol = Tot_Stock_Vol
                     G_Ticker_Vol = Ticker
                 End If
-           
+
+                Tot_Stock_Vol = 0
+                Ticker = ws.Cells(i, 1).Value
+                OpenRow = ws.Cells(i, 3).Value
+                j = j + 1
+            Else
+
+                Tot_Stock_Vol = Tot_Stock_Vol + ws.Cells(i, 7).Value
+            End If
         Next i
 
-        ' Print the greatest results for the current worksheet
         ws.Cells(2, 16).Value = G_increase_ticker
         ws.Cells(3, 16).Value = G_decrease_ticker
         ws.Cells(4, 16).Value = G_Ticker_Vol
     Next ws
 End Sub
+
