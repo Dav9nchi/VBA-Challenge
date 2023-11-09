@@ -1,4 +1,4 @@
-# Stocks summarize Through the years.
+# Stocks Yearly Summarize.
 
 # Description 
 In this project you can get informed about yearly stock summarize information including but not limited to changes, volumes,Porcentages, Greatest increases & decreases.
