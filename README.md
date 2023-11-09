@@ -19,7 +19,7 @@ conditional formatting that will highlight positive change in green and negative
 
 # How to use it.
 1. click following link : https://github.com/Dav9nchi/VBA-Challenge/tree/main
-2. Get informed by the project on README.md
+2. Get informed by the project on [README.md](https://github.com/Dav9nchi/VBA-Challenge/blob/main/README.md)
 3. follow the code link https://github.com/Dav9nchi/VBA-Challenge/blob/main/(Code)%20Stocks%20Yearly%20Summarize
 4. open and download"alphabetical_testing.xlsx"
      Note: when download you mut have Excel aplication and "Developer" adjustment on your excel.
