@@ -33,10 +33,10 @@ this project was create with a contribution of different sources including but n
    
 3. Formula Adjustment (https://www.thebalancemoney.com/what-is-percentage-change-5204725#:~:text=Step%201%3A%20Determine%20the%20original,Step%204%3A%20Multiply%20by%20100.)
 
-4.Multisheet Running Macro (https://stackoverflow.com/questions/32055165/run-macro-on-multiple-excel-worksheets)
+4. Multisheet Running Macro (https://stackoverflow.com/questions/32055165/run-macro-on-multiple-excel-worksheets)
 
-5.Slack Channel (https://app.slack.com/huddle/T05RY45JWJE/C05RY4MUMRQ)
+5. Slack Channel (https://app.slack.com/huddle/T05RY45JWJE/C05RY4MUMRQ)
 
-6.AskBCS Learning Assistants (Name: Tristen Username: tortiz, Name: Sunshine Username:kpavelka, Name: Garret Username: gfrank)
+6. AskBCS Learning Assistants (Name: Tristen Username: tortiz, Name: Sunshine Username:kpavelka, Name: Garret Username: gfrank)
 
 
