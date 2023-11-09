@@ -39,4 +39,6 @@ this project was create with a contribution of different sources including but n
 
 6. AskBCS Learning Assistants (Name: Tristen Username: tortiz, Name: Sunshine Username:kpavelka, Name: Garret Username: gfrank)
 
+7. The usage of "alphabetical_testing.xlsx" is originated by edX Boot Camps LLC and is intended for educational purposes only.
+
 
