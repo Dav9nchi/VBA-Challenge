@@ -18,16 +18,16 @@ Sub StocksYearlySummarize()
         Dim LastRow As Long
         Dim i As Long
 
-        ws.Cells(1, 9).Value = "Ticker"
-        ws.Cells(1, 10).Value = "Yearly change"
-        ws.Cells(1, 11).Value = "Percent change"
-        ws.Cells(1, 12).Value = "Tot Stock Vol"
-        ws.Cells(1, 16).Value = "Ticker"
-        ws.Cells(1, 17).Value = "Value"
-        ws.Cells(4, 15).Value = "Greatest Total Volume"
-        ws.Cells(3, 15).Value = "Greatest % Decrease"
-        ws.Cells(2, 15).Value = "Greatest % Increase"
-
+        ws.Range("i1").Value = "Ticker"
+        ws.Range("J1").Value = "Yearly Change"
+        ws.Range("k1").Value = "Percent Change"
+        ws.Range("l1").Value = "Total Stock Volume"
+        ws.Range("P1").Value = "Ticker"
+        ws.Range("Q1").Value = "Value"
+        ws.Range("O4").Value = "Greatest Total Volume"
+        ws.Range("O3").Value = "Greatest % Decrease"
+        ws.Range("O2").Value = "Greatest % Increase"
+  
         G_porc_increase = 0
         G_porc_decrease = 0
         G_Vol = 0
@@ -35,22 +35,15 @@ Sub StocksYearlySummarize()
         G_decrease_ticker = ""
         G_Ticker_Vol = ""
 
-        ws.Cells(4, 16).Value = G_Ticker_Vol
-        ws.Cells(3, 16).Value = G_decrease_ticker
-        ws.Cells(2, 16).Value = G_increase_ticker
-        ws.Cells(4, 17).Value = G_Vol
-        ws.Cells(3, 17).Value = G_porc_decrease
-        ws.Cells(2, 17).Value = G_porc_increase
-
         Tot_Stock_Vol = 0
         j = 2
 
         LastRow = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row
+        OpenRow = ws.Cells(2, 3).Value
 
         For i = 2 To LastRow
             Ticker = ws.Cells(i, 1).Value
             If Ticker <> ws.Cells(i + 1, 1).Value Or i = LastRow Then
-                OpenRow = ws.Cells(i, 3).Value
                 CloseRow = ws.Cells(i, 6).Value
                 Yearly_change = CloseRow - OpenRow
 
@@ -86,17 +79,20 @@ Sub StocksYearlySummarize()
 
                 Tot_Stock_Vol = 0
                 Ticker = ws.Cells(i, 1).Value
-                OpenRow = ws.Cells(i, 3).Value
+                OpenRow = ws.Cells(i + 1, 3).Value
                 j = j + 1
             Else
-
                 Tot_Stock_Vol = Tot_Stock_Vol + ws.Cells(i, 7).Value
             End If
         Next i
 
-        ws.Cells(2, 16).Value = G_increase_ticker
-        ws.Cells(3, 16).Value = G_decrease_ticker
-        ws.Cells(4, 16).Value = G_Ticker_Vol
+        ws.Range("P2").Value = G_increase_ticker
+        ws.Range("P3").Value = G_decrease_ticker
+        ws.Range("P4").Value = G_Ticker_Vol
+
+        ws.Cells(4, 17).Value = G_Vol
+        ws.Cells(3, 17).Value = G_porc_decrease
+        ws.Cells(2, 17).Value = G_porc_increase
+        
     Next ws
 End Sub
-
