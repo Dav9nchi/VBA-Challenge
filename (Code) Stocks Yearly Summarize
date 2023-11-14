@@ -46,7 +46,6 @@ Sub StocksYearlySummarize()
             If Ticker <> ws.Cells(i + 1, 1).Value Or i = LastRow Then
                 CloseRow = ws.Cells(i, 6).Value
                 Yearly_change = CloseRow - OpenRow
-
                 ws.Cells(j, 9).Value = Ticker
                 ws.Cells(j, 10).Value = Yearly_change
                 ws.Cells(j, 12).Value = Tot_Stock_Vol
@@ -71,6 +70,10 @@ Sub StocksYearlySummarize()
                     G_porc_decrease = Percentage_change
                     G_decrease_ticker = Ticker
                 End If
+                
+                ws.Range("Q2").Value = Format(0, "Percent")
+                ws.Range("Q3").Value = Format(0, "Percent")
+                ws.Range("Q4").Value = Format(0, "Percent")
 
                 If Tot_Stock_Vol > G_Vol Then
                     G_Vol = Tot_Stock_Vol
@@ -89,7 +92,6 @@ Sub StocksYearlySummarize()
         ws.Range("P2").Value = G_increase_ticker
         ws.Range("P3").Value = G_decrease_ticker
         ws.Range("P4").Value = G_Ticker_Vol
-
         ws.Cells(4, 17).Value = G_Vol
         ws.Cells(3, 17).Value = G_porc_decrease
         ws.Cells(2, 17).Value = G_porc_increase
